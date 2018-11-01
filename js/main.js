@@ -12,19 +12,16 @@ function init() {
         document.getElementById("home").classList.toggle("display");
         document.getElementById("list").classList.toggle("display");
 
-        var x = document.getElementById("digits").value;
-        console.log(x);
-        var y = document.getElementById("max").value;
-        console.log(y);
-
+        let digits = document.getElementById("digits").value;
+        let max = document.getElementById("max").value;
 
         let formData = new FormData();
 
         let url = "https://davidst.edumedia.ca/mad9014/nums.php";
 
 
-        formData.append("digits", x);
-        formData.append("max", y);
+        formData.append("digits", digits);
+        formData.append("max", max);
 
         let customSettings = {
             mode: "cors",
@@ -34,7 +31,6 @@ function init() {
 
         let request = new Request(url, customSettings);
 
-
         fetch(request)
             .then(function (response) {
                 console.log(response);
@@ -42,20 +38,24 @@ function init() {
             })
             .then(
                 function (data) {
-                    //
 
                     console.log(data.numbers);
 
                     let ul = document.querySelector(".num_list");
-                    ul.innerHTML = ""; //clear out the old list
+                    ul.innerHTML = "";
+
                     for (let item in data.numbers) {
-
-                        console.log(item + ": " + data.numbers[item]);
-
                         let li = document.createElement("li");
                         li.innerHTML = data.numbers[item];
                         ul.appendChild(li);
+                    }
 
+
+                    if (ul.innerHTML == "") {
+                        let li = document.createElement("li");
+                        li.textContent = "You need to write the numbers in the textbox! Start again now!";
+                        ul.appendChild(li);
+                        document.querySelector("li").classList.toggle("Message");
                     }
                 }
             )
@@ -66,48 +66,3 @@ function init() {
     });
 
 }
-
-
-//
-//    let ul = document.querySelector(".num_list");
-//    ul.innerHTML = ""; //clear out the old list
-//    for (let item in numbers) {
-//
-////        console.log(item + ": " + numbers[item]);
-//        let li = document.createElement("li");
-//        li.innerHTML = numbers[item];
-//        ul.appendChild(li);
-
-
-
-
-
-
-//
-//document.getElementById("btnSend").addEventListener("click", function () {
-//
-//    var digits = document.getElementById("digits").value;
-//    console.log(digits);
-//    var y = document.getElementById("range").value;
-//    console.log(y);
-//
-//    function getRandomInteger(min, max) {
-//        min = Math.ceil(min); // min is inclusive
-//        max = Math.floor(max + 1); // max is exclusive so we add one
-//        return Math.floor(Math.random() * (max - min)) + min;
-//    }
-//
-//    let b = y;
-//    let a = getRandomInteger(1, b);
-//    console.log(a);
-//
-//    let lotto = [];
-//
-//    for (let i = 0; i < digits; i++) {
-//
-//        lotto.push(getRandomInteger(1, b));
-//
-//    }
-//
-//    console.log(lotto);
-//})

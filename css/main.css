@@ -1,29 +1,51 @@
-html{
+@import url('https://fonts.googleapis.com/css?family=Kodchasan');
+
+html {
     text-align: center;
+    font-family: Kodchasan, Helvetica, Arial, sans-serif;
 }
 
-ul{
+button {
+    font-family: Kodchasan, Helvetica, Arial, sans-serif;
+    box-shadow: 1px 1px 2px black;
+}
+
+ul {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
-    list-style:none;
-    margin: 0 7rem;
-    padding: 0;
+    list-style: none;
+    padding: 3rem 7rem;
+    background-image: url(../img/img1.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
-li{
-    
-    background-color:coral;
+li {
     width: 2rem;
     padding: 0rem 2rem;
-    border: 1px solid grey;
+    box-shadow: 2px 2px 2px white;
     font-size: 2rem;
     font-family: sans-serif;
     color: white;
-    margin: 1rem 0;
+    margin: 1rem 0.5rem;
+    border-radius: 50%;
+    text-shadow: 2px 2px 2px black;
 }
 
-.display{
+.display {
     display: none;
+}
+
+ul .Message{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    list-style: none;
+    width: 100%;
+    background-image: url(../img/img1.jpg);
+    background-size: cover;
+    background-position: center;
 }
