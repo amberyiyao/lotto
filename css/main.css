@@ -4,6 +4,16 @@
 html {
     text-align: center;
     font-family: Kodchasan, Helvetica, Arial, sans-serif;
+    background-image: url(../img/img1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+label,
+span {
+    color: white;
+    text-shadow: 2px 2px 2px black;
 }
 
 button {
@@ -18,9 +28,7 @@ ul {
     flex-wrap: wrap;
     list-style: none;
     padding: 3rem 7rem;
-    background-image: url(../img/img1.jpg);
-    background-size: cover;
-    background-position: center;
+
 }
 
 li {
@@ -40,32 +48,52 @@ li {
     display: none;
 }
 
-ul .Message{
+div {
+
+    padding: 3rem 0;
+}
+
+ul .Message {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
     list-style: none;
     width: 100%;
-    background-image: url(../img/img1.jpg);
-    background-size: cover;
     background-position: center;
     font-family: Kodchasan, Helvetica, Arial, sans-serif;
 }
 
+header {
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    font-size: 3vw;
+}
+
 @media (max-width: 599px) {
 
-    html{
+    header {
+        font-size: 6vw;
+
+    }
+
+    html {
+        font-family: "Patrick Hand", Helvetica, Arial, sans-serif;
+        background-image: url(../img/img2.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    ul .Message {
         font-family: "Patrick Hand", Helvetica, Arial, sans-serif;
     }
 
-    ul .Message{
+    li {
         font-family: "Patrick Hand", Helvetica, Arial, sans-serif;
     }
-    li{
-        font-family: "Patrick Hand", Helvetica, Arial, sans-serif;
-    }
-    button{
+
+    button {
         font-family: "Patrick Hand", Helvetica, Arial, sans-serif;
     }
 }
