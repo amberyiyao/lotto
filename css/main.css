@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Kodchasan');
+@import url('https://fonts.googleapis.com/css?family=Patrick Hand');
 
 html {
     text-align: center;
@@ -32,6 +33,7 @@ li {
     margin: 1rem 0.5rem;
     border-radius: 50%;
     text-shadow: 2px 2px 2px black;
+    font-family: Kodchasan, Helvetica, Arial, sans-serif;
 }
 
 .display {
@@ -48,4 +50,22 @@ ul .Message{
     background-image: url(../img/img1.jpg);
     background-size: cover;
     background-position: center;
+    font-family: Kodchasan, Helvetica, Arial, sans-serif;
+}
+
+@media (max-width: 599px) {
+
+    html{
+        font-family: "Patrick Hand", Helvetica, Arial, sans-serif;
+    }
+
+    ul .Message{
+        font-family: "Patrick Hand", Helvetica, Arial, sans-serif;
+    }
+    li{
+        font-family: "Patrick Hand", Helvetica, Arial, sans-serif;
+    }
+    button{
+        font-family: "Patrick Hand", Helvetica, Arial, sans-serif;
+    }
 }
