@@ -14,11 +14,15 @@ label,
 span {
     color: white;
     text-shadow: 2px 2px 2px black;
+    font-size: 2vw;
 }
 
 button {
     font-family: Kodchasan, Helvetica, Arial, sans-serif;
     box-shadow: 1px 1px 2px black;
+    margin: 3rem 0;
+    padding: 7px;
+    font-size: 0.9rem;
 }
 
 ul {
@@ -70,11 +74,11 @@ header {
     font-size: 3vw;
 }
 
-@media (max-width: 599px) {
+@media (orientation:portrait) {
+
 
     header {
         font-size: 6vw;
-
     }
 
     html {
@@ -83,6 +87,15 @@ header {
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+    }
+
+    label,
+    span {
+        font-size: 5vw;
+    }
+    
+    ul{
+        padding: 1rem;
     }
 
     ul .Message {
