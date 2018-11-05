@@ -5,7 +5,6 @@ function init() {
     document.getElementById("btnBack").addEventListener("click", function () {
         document.getElementById("home").classList.toggle("display");
         document.getElementById("list").classList.toggle("display");
-
     });
 
     document.getElementById("btnSend").addEventListener("click", function () {
@@ -14,6 +13,7 @@ function init() {
 
         let digits = document.getElementById("digits").value;
         let max = document.getElementById("max").value;
+
 
         let formData = new FormData();
 
@@ -50,13 +50,13 @@ function init() {
                         ul.appendChild(li);
                     }
 
-
                     if (ul.innerHTML == "") {
                         let li = document.createElement("li");
-                        li.textContent = "You need to write the numbers in the textbox! Start again now!";
+                        li.textContent = `Misstake! ${data.message} Start again now!`;
                         ul.appendChild(li);
                         document.querySelector("li").classList.toggle("Message");
                     }
+
                 }
             )
             .catch(function (error) {
@@ -64,5 +64,6 @@ function init() {
             });
 
     });
+
 
 }
