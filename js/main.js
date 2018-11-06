@@ -2,6 +2,12 @@ document.addEventListener("DOMContentLoaded", init);
 
 function init() {
 
+    document.addEventListener("keypress", function (e) {
+        if (e.keyCode === 13) {
+            document.getElementById("btnSend").click();
+        }
+    });
+
     document.getElementById("btnBack").addEventListener("click", function () {
         document.getElementById("home").classList.toggle("display");
         document.getElementById("list").classList.toggle("display");
